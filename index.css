@@ -26,7 +26,7 @@ body {
 
 .logo {
     font-size: 30px;
-    color: tomato;
+    color: DarkOrange;
 }
 
 .menu-container {
@@ -95,4 +95,13 @@ body {
     height: 100%;
     background-image: radial-gradient(circle at 95.45% -4.17%, #423b28 0, #352f22 16.67%, #27221b 33.33%, #151413 50%, #000006 66.67%, #000000 83.33%, #000000 100%); 
    top: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.left-menu-icon{
+    color: PeachPuff;
+    font-size: 20px;
+    margin-bottom: 40px;
 }
