@@ -164,6 +164,8 @@ body {
     display: flex;
     align-items: center;
     height: 300px;
+    transform: translate(0);
+    transition: 1s all ease-in-out;
 }
 
 .movie-list-item {
@@ -188,6 +190,7 @@ body {
     width: 270px;
     height: 200px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .movie-list-item-title {
