@@ -5,17 +5,32 @@ arrows.forEach((arrow,i)=>{
     const itemNumber = movieLists[i].querySelectorAll("img").length;
     let clickCounter = 0
     arrow.addEventListener("click", ()=>{
+        const ratio = Math.floor(window.innerWidth / 270);
         clickCounter++;
-        if (itemNumber - (6 + clickCounter) >=  0){
-            movieLists[i].style.transform = `translate(${
-                movieLists[i].computedStyleMap().get("transform")[0].x.value
-            -300}px)`;
+        if (itemNumber - (4 + clickCounter) + (4 - ratio) >=  0){
+            movieLists[i].style.transform = `translateX(${
+                movieLists[i].computedStyleMap().get("transform")[0].x.value - 300
+            }px)`;
         }else{
-            movieLists[i].style.transform = "translate(0)";
+            movieLists[i].style.transform = "translateX(0)";
             clickCounter = 0;
         }
 
-    })
+    });
 
-    console.log(movieLists[i].querySelectorAll("img").length);
+    console.log(Math.floor(window.innerWidth / 270));
+})
+
+
+// TOGGLE
+
+const ball = document.querySelector(".toggle-ball");
+const items = document.querySelectorAll(
+    ".container,.movie-list-title,.navbar,.sidebar,.left-menu-icon,.toggle,.toggle-ball,.profile-text"
+    );
+
+ball.addEventListener("click",()=>{
+    items.forEach(item=>{
+        item.classList.toggle("active")
+    })
 })
